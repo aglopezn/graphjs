@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
     <title>.::Graph JS::.</title>
 </head>
 <body>
-    <!-- Panel lateral izquierdo -->
-    <div>
-        <div>
-            <img src="" alt="logo.png">
-        </div>
-        <div>
-            <h1>GraphicJS</h1>
-            <p>Optimiza tus procesos a trav&eacute;s de esta herramienta
-                que har&aacute; tus c&aacute;lculos de una forma eficaz y sencilla.
-                Una vez la uses no podr&aacute;s dejarla.
-            </p>
-            <h2>¡Empieza ahora!</h2>
-            <div>
-                <form action="/metodo-grafico" method="get">
-                    <button type="submit">M&eacute;todo Gr&aacute;fico</button>
-                </form>
+    <div class="main-container">
+        <!-- Panel lateral izquierdo -->
+        <div class="left-container">
+            <div id="logo">
+                <img src="images/logo.png" alt="logo.png">
+            </div>
+            <div id="texto-landing">
+                <h1>GraphicJS</h1>
+                <p>Optimiza tus procesos a trav&eacute;s de esta herramienta
+                    que har&aacute; tus c&aacute;lculos de una forma eficaz y sencilla.
+                    Una vez la uses no podr&aacute;s dejarla.
+                </p>
+                <h2>¡Empieza ahora!</h2>
+                <div id="botones-landing">
+                    <form action="/metodo-grafico" method="get">
+                        <button type="submit" class="boton">M&eacute;todo Gr&aacute;fico</button>
+                    </form>
 
-                <form action="/metodo-dos-fases" method="get">
-                    <button type="submit">M&eacute;todo Dos Fases</button>
-                </form>
+                    <form action="/metodo-dos-fases" method="get">
+                        <button type="submit" class="boton">M&eacute;todo Dos Fases</button>
+                    </form>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Panel lateral derecho -->
-    <div>
-
+        <!-- Panel lateral derecho -->
+        <div class="right-container">
+            <p>Hola</p>
+        </div>
     </div>
 </body>
 </html>
