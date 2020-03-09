@@ -1,0 +1,102 @@
+/* Variables */
+:root {
+    --primary-color: #8c55b0;
+    --black-color: #190633;
+    --white-color: #eadaf7;
+    --third-color: #53227b;
+    --font-size-h1: 72px;
+    --font-size-h2: 64px;
+    --font-size-h3: 32px;
+    --font-size-p: 20px;
+    --font-size-p-pq: 16px;
+}
+
+/* ------ Cuerpo de la pagina ------ */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--black-color); 
+    color: var(--white-color);
+}
+
+/* ------ navbar ------ */
+nav {
+    width: 100%;
+    height: 100px;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul a{
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+nav ul a:hover {
+    cursor: pointer;
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+/* ------ botones ------ */
+.boton {
+    margin: 8px;
+    width: 240px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton-principal{
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    font-size: var(--font-size-p);
+    box-shadow: 3px 3px 6px var(--third-color);
+}
+
+.boton-principal:hover {
+    box-shadow: inset 3px 3px 6px var(--third-color);
+}
+
+/* ------ textos ------ */
+p{
+    font-size: var(--font-size-p);
+}
+
+h1{
+    font-size: var(--font-size-h1);
+}
+
+h2{
+    font-size: var(--font-size-h2);
+}
+
+
+/* ------ media quieries ------ */
+
+@media (max-width: 1000px){
+    :root {
+        --font-size-h1: 56px;
+        --font-size-h2: 40px;
+        --font-size-h3: 24px;
+        --font-size-p: 16px;
+        --font-size-p-pq: 12px;
+    }
+}

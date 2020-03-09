@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/basic_styles.css">
+    <link rel="stylesheet" href="css/landpage_styles.css">
     <title>.::Graph JS::.</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
         <!-- Panel lateral izquierdo -->
         <div class="left-container">
            
-            <header>
+            <nav class="nav-responsive">
                 <img id="logo" src="images/logo.png" alt="logo.png">
                 <!-- Menu desplegable para dispositivos con ancho menor a 1000px -->
                 <div class="dropleft">
@@ -27,7 +28,7 @@
                         <a class="dropdown-item" href="#">Ayuda</a>
                     </div>
                 </div>
-            </header>
+            </nav>
             <!-- Texto de bienvenida a la plataforma -->
             <div class="texto-landing">
                 <h1>GraphicJS</h1>
@@ -40,11 +41,11 @@
             <!-- Botones para empezar a usar la plataforma -->
             <div class="botones-landing">
                 <form action="/metodo-grafico" method="get">
-                    <button type="submit" class="boton">M&eacute;todo Gr&aacute;fico</button>
+                    <button type="submit" class="boton boton-principal">M&eacute;todo Gr&aacute;fico</button>
                 </form>
 
                 <form action="/metodo-dos-fases" method="get">
-                    <button type="submit" class="boton">M&eacute;todo Dos Fases</button>
+                    <button type="submit" class="boton boton-principal">M&eacute;todo Dos Fases</button>
                 </form>
             </div>
         </div>

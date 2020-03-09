@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beltranmafe/Proyecto-IO.git"
+    "url": "git+https://github.com/aglopezn/graphjs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/beltranmafe/Proyecto-IO/issues"
+    "url": "https://github.com/aglopezn/graphjs/issues"
   },
-  "homepage": "https://github.com/beltranmafe/Proyecto-IO#readme",
+  "homepage": "https://github.com/aglopezn/graphjs#readme",
   "dependencies": {
     "express": "^4.17.1"
   },
