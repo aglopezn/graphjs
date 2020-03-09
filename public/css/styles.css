@@ -1,23 +1,26 @@
+/* Variables */
 :root {
     --primary-color: #8c55b0;
     --black-color: #190633;
     --white-color: #eadaf7;
     --third-color: #53227b;
-    --font-size-1: 72px;
-    --font-size-2: 64px;
-    --font-size-3: 32px;
-    --font-size-4: 24px;
-    --font-size-4: 20px;
+    --font-size-h1: 72px;
+    --font-size-h2: 64px;
+    --font-size-h3: 32px;
+    --font-size-p: 24px;
+    --font-size-p-sm: 20px;
 }
 
+/* estilos básicos */
 html, body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: var(--black-color); 
     color: var(--white-color);
 }
 
+/* Contenedores */
 .main-container {
     display: flex;
     height: 100vh;
@@ -25,9 +28,8 @@ html, body {
 
 .left-container {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    /* align-items: flex-start; */
+    justify-content: space-between;
     max-height: 100vh;
     width: 50%;
 }
@@ -38,13 +40,13 @@ html, body {
     background-repeat: no-repeat;
     background-color: var(--black-color);
     margin-top: -8px;
-    margin-right: -100px;
     display: flex;
     justify-content: center;
     max-height: 100vh;
     width: 50%;
 }
 
+/* Menus */
 nav {
     width: 80%;
     height: 100px;
@@ -52,6 +54,7 @@ nav {
     display: flex;
     align-items: center;
 }
+
 nav ul {
     margin: 0;
     padding: 0;
@@ -77,16 +80,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 150px;
 }
 
 #logo {
     max-width: 100px;
     max-height: 100px;
-    margin-left: 24px;
-    margin-top: 16px;
+    margin-left: 16px;
 }
 
-#button-menu-responsive {
+#boton-menu-responsive {
     max-width: 50px;
     max-height: 50px;
     background-color: var(--black-color);
@@ -94,10 +97,12 @@ header {
     display: none;
 }
 
-#button-menu-responsive img {
+#boton-menu-responsive img {
     max-width: 100%;
     max-height: 100%;
 }
+
+/* Texto de bienvenida */
 
 #texto-landing {
     display: flex;
@@ -106,20 +111,24 @@ header {
     align-items: center;
 }
 
-#texto-landing p, h1, h2{
+.texto-landing p, h1, h2{
     text-align: center;
-    font-size: var(--font-size-4);
 }
 
-#texto-landing h1{
-    font-size: var(--font-size-1);
+.texto-landing p{
+    font-size: var(--font-size-p);
+    padding: 0px 16px;
 }
 
-#texto-landing h2{
-    font-size: var(--font-size-2);
+.texto-landing h1{
+    font-size: var(--font-size-h1);
 }
 
-#botones-landing {
+.texto-landing h2{
+    font-size: var(--font-size-h2);
+}
+
+.botones-landing {
     display: flex;
     justify-content: space-around;
     margin-bottom: 24px;
@@ -127,12 +136,12 @@ header {
 
 .boton {
     margin: 8px;
-    width: 250px;
+    width: 240px;
     height: 50px;
     border-radius: 25px;
     background-color: var(--primary-color);
     color: var(--black-color);
-    font-size: var(--font-size-4);
+    font-size: var(--font-size-p);
     box-shadow: 3px 3px 6px var(--third-color);
     border: none;
 }
@@ -142,13 +151,15 @@ header {
     box-shadow: inset 3px 3px 6px var(--third-color);
 }
 
+/* Media queries para diseño responsive */
+
 @media (max-width: 1000px){
     :root {
-        --font-size-1: 56px;
-        --font-size-2: 48px;
-        --font-size-3: 28px;
-        --font-size-4: 20px;
-        --font-size-4: 16px;
+        --font-size-h1: 56px;
+        --font-size-h2: 40px;
+        --font-size-h3: 24px;
+        --font-size-p: 16px;
+        --font-size-p-sm: 12px;
     }
 
     .main-container {
@@ -157,24 +168,31 @@ header {
 
     .left-container {
         width: 100%;
-        
+        height: 100vh;   
     }
 
     .right-container {
         display: none;
     }
 
-    #button-menu-responsive {
+    #boton-menu-responsive {
         display: inline;
     }
 
-    .menu-responsive {
+    .menu-resposive {
         background-color: var(--primary-color);
         color: var(--black-color);
     }
 
-    #botones-landing {
-        flex-direction: column;
+    .dropdown-item:hover {
+        background-color: var(--white-color)
     }
 
+}
+
+@media (max-width: 600px){
+    .botones-landing {
+        flex-direction: column;
+        align-items: center;
+    }
 }

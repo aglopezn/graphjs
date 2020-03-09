@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <title>.::Graph JS::.</title>
@@ -11,13 +12,15 @@
     <div class="main-container">
         <!-- Panel lateral izquierdo -->
         <div class="left-container">
+           
             <header>
                 <img id="logo" src="images/logo.png" alt="logo.png">
+                <!-- Menu desplegable para dispositivos con ancho menor a 1000px -->
                 <div class="dropleft">
-                    <button id="button-menu-responsive" data-toggle="dropdown" type="button">
+                    <button id="boton-menu-responsive" data-toggle="dropdown" type="button">
                         <img src="https://image.flaticon.com/icons/png/128/1828/1828664.png">
                     </button>
-                    <div class="menu-resposive dropdown-menu" aria-labelledby="button-menu-responsive">
+                    <div class="menu-resposive dropdown-menu" aria-labelledby="boton-menu-responsive">
                         <a class="dropdown-item" href="#">Inicio</a>
                         <a class="dropdown-item" href="#">M&eacute;todos</a>
                         <a class="dropdown-item" href="#">Nosotros</a>
@@ -25,7 +28,8 @@
                     </div>
                 </div>
             </header>
-            <div id="texto-landing">
+            <!-- Texto de bienvenida a la plataforma -->
+            <div class="texto-landing">
                 <h1>GraphicJS</h1>
                 <p>Optimiza tus procesos a trav&eacute;s de esta herramienta
                     que har&aacute; tus c&aacute;lculos de una forma eficaz y sencilla.
@@ -33,7 +37,8 @@
                 </p>
                 <h2>¡Empieza ahora!</h2>
             </div>
-            <div id="botones-landing">
+            <!-- Botones para empezar a usar la plataforma -->
+            <div class="botones-landing">
                 <form action="/metodo-grafico" method="get">
                     <button type="submit" class="boton">M&eacute;todo Gr&aacute;fico</button>
                 </form>
@@ -46,6 +51,7 @@
 
         <!-- Panel lateral derecho -->
         <div class="right-container">
+            <!-- Menu navbar para dispositivos con ancho mayor a 1000px -->
             <nav>
                 <ul>
                     <a href="#"><li>Inicio</li></a>
@@ -56,8 +62,9 @@
             </nav>
         </div>
     </div>
+    <!-- scripts de bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
