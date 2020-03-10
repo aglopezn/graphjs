@@ -13,7 +13,7 @@
 }
 
 .right-container {
-    background-image: url("https://imgur.com/Ii8obhW.png");
+    background-image: url("../images/diseno-landpage.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-color: var(--black-color);
@@ -33,12 +33,6 @@ nav {
 .nav-responsive {
     width: 100%;
     background-color: var(--black-color);
-}
-
-#logo {
-    max-width: 100px;
-    max-height: 100px;
-    margin-left: 16px;
 }
 
 #boton-menu-responsive {

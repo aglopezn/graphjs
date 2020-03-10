@@ -1,0 +1,16 @@
+:root {
+    --primary-color: #8c55b0;
+    --black-color: #190633;
+    --white-color: #eadaf7;
+    --third-color: #53227b;
+    --font-size-h1: 72px;
+    --font-size-h2: 64px;
+    --font-size-h3: 32px;
+    --font-size-p: 20px;
+    --font-size-p-pq: 16px;
+}
+
+.eqn-variable {
+    border: none;
+    border-bottom: 1px solid var(--primary-color);
+}

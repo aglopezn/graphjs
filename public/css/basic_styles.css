@@ -51,6 +51,12 @@ nav ul a:hover {
     text-decoration: none;
 }
 
+#logo {
+    max-width: 100px;
+    max-height: 100px;
+    margin-left: 16px;
+}
+
 /* ------ botones ------ */
 .boton {
     margin: 8px;
