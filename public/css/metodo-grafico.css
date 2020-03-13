@@ -13,6 +13,15 @@
     --font-size-p-pq: 16px;
 } */
 
+nav {
+    height: auto;
+}
+
+.navbar-toggler-icon {
+    background-image: url("https://image.flaticon.com/icons/png/128/1828/1828664.png");
+    background-size: contain; 
+}
+
 .border-bottom {
     border: none;
     border-bottom: 1px;
