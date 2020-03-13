@@ -52,7 +52,7 @@ nav ul a{
 
 nav ul a:hover {
     cursor: pointer;
-    color: var(--black-color);
+    color: var(--accent-color-1);
     text-decoration: none;
 }
 
