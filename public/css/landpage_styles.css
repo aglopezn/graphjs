@@ -28,6 +28,7 @@
 nav {
     width: 80%;
     margin-top: 8px;
+    background-color: var(--primary-color);
 }
 
 .nav-responsive {
