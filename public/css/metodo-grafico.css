@@ -1,16 +1,67 @@
-:root {
-    --primary-color: #8c55b0;
-    --black-color: #190633;
-    --white-color: #eadaf7;
-    --third-color: #53227b;
+/* :root {
+    --primary-color: #8C55B0;
+    --secondary-color: #4B2663;
+    --accent-color-1: #43B072;
+    --accent-color-2: #437057;
+    --accent-color-3: #B09566;
+    --black-color: #2E1C3B;
+    --white-color: #E6C5FC; 
     --font-size-h1: 72px;
     --font-size-h2: 64px;
     --font-size-h3: 32px;
     --font-size-p: 20px;
     --font-size-p-pq: 16px;
+} */
+
+.border-bottom {
+    border: none;
+    border-bottom: 1px;
 }
 
-.eqn-variable {
+.border-primary {
+    border-color: var(--primary-color)!important;
+}
+.card {
+    color: var(--black-color);
+    width: 100%;
+}
+
+.card, input, select {
+    background-color: var(--white-color);
+}
+
+.variable {
     border: none;
     border-bottom: 1px solid var(--primary-color);
+    max-width: 6em;
+    font-size: var(--font-size-p-pq);
+}
+
+.equation {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.equation input, label, select {
+    margin: 0;
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1000px){
+    .equation {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .row {
+        flex-direction: column;
+    }
 }

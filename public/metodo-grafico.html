@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/basic_styles.css">
     <link rel="stylesheet" href="css/metodo-grafico.css">
     <title>M&eacute;todo Gr&aacute;fico</title>
 </head>
 <body>
-    <nav>
+    <nav class="mb-3">
         <img id="logo" src="images/logo.png" alt="logo.png">
         <div id="menu-list">
             <ul class="justify-content-end">
@@ -25,18 +25,68 @@
 
     <div class="container">
         <div class="row">
+            <!-- Formulario para capturar las ecuaciones -->
             <div class="col">
                 <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">M&eacute;todo Gr&aacute;fico</h3>
+                    </div>
                    <div class="card-body">
                         <form action="/calcular-grafico" method="post">
-                            <input type="number" class="eqn-variable" id="x1">
-                            <label for="x1">x1</label>
-                            <input type="number" class="eqn-variable" id="x2">
-                            <label for="x2">x2</label>
+                            <h4 class="card-title">Funci&oacute;n objetivo</h4>
+                            <div class="form-group row">
+                                <div class="equation">
+                                    <div>
+                                        <input type="number" class="variable" id="x1">
+                                        <label for="x1">x1</label>
+                                        <label class="mx-2 mb-0">+</label>
+                                        <input type="number" class="variable" id="x2">
+                                        <label for="x2" class="mb-0">x2</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <h4 class="card-title">Restricciones</h4>
+                            <div class="form-group row">
+                                <div class="equation">
+                                    <div>
+                                        <input type="number" class="variable" id="r1-x1">
+                                        <label for="r1-x1">x1</label>
+                                        <label class="mx-2 mb-0">+</label>
+                                        <input type="number" class="variable" id="r1-x2">
+                                        <label for="r1-x2" class="mb-0">x2</label>
+                                    </div>
+                                    <select name="op-selector" class="variable">
+                                        <option value="less"><=</option>
+                                        <option value="greater">>=</option>
+                                    </select>
+                                    <input type="number" class="variable" id="r1-b2">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="equation">
+                                    <div>
+                                        <input type="number" class="variable" id="r2-x1">
+                                        <label for="r2-x1">x1</label>
+                                        <label class="mx-2 mb-0">+</label>
+                                        <input type="number" class="variable" id="r2-x2">
+                                        <label for="r2-x2" class="mb-0">x2</label>
+                                    </div>
+                                    <select name="op-selector" class="variable">
+                                        <option value="less"><=</option>
+                                        <option value="greater">>=</option>
+                                    </select>
+                                    <input type="number" class="variable" id="r2-b2">
+                                </div>
+                            </div>
+                            <div class="submit">
+                                <button type="submit" class="boton-calcular boton-principal">Calcular</button>
+                            </div>
                         </form>
                    </div>
                 </div>
             </div>
+
+            <!-- Grafica con los resultados del problema -->
             <div class="col">
 
             </div>

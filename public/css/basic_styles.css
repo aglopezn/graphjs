@@ -1,9 +1,13 @@
 /* Variables */
 :root {
-    --primary-color: #8c55b0;
-    --black-color: #190633;
-    --white-color: #eadaf7;
-    --third-color: #53227b;
+    /* --third-color: #53227b; */
+    --primary-color: #8C55B0;
+    --secondary-color: #4B2663;
+    --accent-color-1: #43B072;
+    --accent-color-2: #437057;
+    --accent-color-3: #B09566;
+    --black-color: #2E1C3B;
+    --white-color: #EBDAF7; 
     --font-size-h1: 72px;
     --font-size-h2: 64px;
     --font-size-h3: 32px;
@@ -24,7 +28,7 @@ html, body {
 nav {
     width: 100%;
     height: 100px;
-    background-color: var(--primary-color);
+    background-color: var(--black-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,7 +45,7 @@ nav ul {
 }
 
 nav ul a{
-    color: var(--black-color);
+    color: var(--white-color);
     text-decoration: none;
 }
 
@@ -74,11 +78,24 @@ nav ul a:hover {
     background-color: var(--primary-color);
     color: var(--black-color);
     font-size: var(--font-size-p);
-    box-shadow: 3px 3px 6px var(--third-color);
+    box-shadow: 3px 3px 6px var(--secondary-color);
 }
 
 .boton-principal:hover {
-    box-shadow: inset 3px 3px 6px var(--third-color);
+    box-shadow: inset 3px 3px 6px var(--secondary-color);
+}
+
+.boton-calcular {
+    font-size: var(--font-size-p-pq);
+    margin: 8px;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.boton-calcular:hover {
+    cursor: pointer;
 }
 
 /* ------ textos ------ */
@@ -94,6 +111,9 @@ h2{
     font-size: var(--font-size-h2);
 }
 
+h2{
+    font-size: var(--font-size-h3);
+}
 
 /* ------ media quieries ------ */
 
