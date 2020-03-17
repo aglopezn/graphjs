@@ -91,11 +91,19 @@
 
             <!-- Grafica con los resultados del problema -->
             <div class="col">
-                <div id="grafica"></div>
+                <div class="card invisible" id="chartContainer">
+                    <div class="card-header">
+                        <h3 class="card-title">Soluci&oacute;n</h3>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
     <script src="js/logic.js"></script>
     <!-- scripts de bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

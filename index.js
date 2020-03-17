@@ -21,9 +21,12 @@ app.get("/metodo-grafico", (req, res) => {
 app.post("/calcular-grafico", (req, res) => {
     console.log(req.body)
     let restricciones = organizarRestricciones(req.body)
-    let sol = gauss(restricciones)
-    console.log(sol)
-    res.json(sol)
+    let resultados = generarPuntos(restricciones)
+    resultados.puntoSolucion = gauss(restricciones)
+    console.log(restricciones)
+    console.log(resultados)
+    console.log(resultados.puntoSolucion)
+    res.json(resultados)
 })
 
 //--------------------------------------------------------------------------------
@@ -38,6 +41,26 @@ function organizarRestricciones(restriccionesJSON){
         restricciones.push(aux)
     }
     return restricciones
+}
+
+function generarPuntos(restricciones){
+    let cantidadRestricciones = restricciones.length
+    let object = {}
+    for (let i=0; i<cantidadRestricciones; i++){
+        object[`restriccion${i+1}`] = new Array()
+        let x = 1
+        for (let j=0; j<restricciones[i].length-1; j++){
+            aux_variable = restricciones[i][2] / restricciones[i][j]
+            if (x===1){
+                aux_objeto = {x: aux_variable, y: 0}
+                x = 0;
+            }else{
+                aux_objeto = {x: 0, y: aux_variable}
+            }
+            object[`restriccion${i+1}`].push(aux_objeto)
+        }
+    }
+    return object
 }
 //--------------------------------------------------------------------------------
 app.listen(PORT, () => (console.log("running server on port", PORT)))
