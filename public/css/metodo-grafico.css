@@ -63,6 +63,13 @@ nav {
     justify-content: center;
 }
 
+.grafica {
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 1000px){
     .equation {
         flex-direction: column;

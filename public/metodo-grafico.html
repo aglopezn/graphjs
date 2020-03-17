@@ -35,15 +35,15 @@
                         <h3 class="card-title">M&eacute;todo Gr&aacute;fico</h3>
                     </div>
                    <div class="card-body">
-                        <form action="/calcular-grafico" method="post">
+                        <form action="/calcular-grafico" method="POST" id="formMetodoGrafico">
                             <h4 class="card-title">Funci&oacute;n objetivo</h4>
                             <div class="form-group row">
                                 <div class="equation">
                                     <div>
-                                        <input type="number" class="variable" id="x1">
+                                        <input type="number" class="variable" id="x1" name="x1">
                                         <label for="x1">x1</label>
                                         <label class="mx-2 mb-0">+</label>
-                                        <input type="number" class="variable" id="x2">
+                                        <input type="number" class="variable" id="x2" name="x2">
                                         <label for="x2" class="mb-0">x2</label>
                                     </div>
                                 </div>
@@ -52,37 +52,37 @@
                             <div class="form-group row">
                                 <div class="equation">
                                     <div>
-                                        <input type="number" class="variable" id="r1-x1">
+                                        <input type="number" class="variable" id="r1-x1" name="rx1">
                                         <label for="r1-x1">x1</label>
                                         <label class="mx-2 mb-0">+</label>
-                                        <input type="number" class="variable" id="r1-x2">
+                                        <input type="number" class="variable" id="r1-x2" name="rx2">
                                         <label for="r1-x2" class="mb-0">x2</label>
                                     </div>
-                                    <select name="op-selector" class="variable">
+                                    <select name="op_selector" class="variable">
                                         <option value="less"><=</option>
                                         <option value="greater">>=</option>
                                     </select>
-                                    <input type="number" class="variable" id="r1-b2">
+                                    <input type="number" class="variable" id="r1-b" name="b">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <div class="equation">
                                     <div>
-                                        <input type="number" class="variable" id="r2-x1">
+                                        <input type="number" class="variable" id="r2-x1"name="rx1">
                                         <label for="r2-x1">x1</label>
                                         <label class="mx-2 mb-0">+</label>
-                                        <input type="number" class="variable" id="r2-x2">
+                                        <input type="number" class="variable" id="r2-x2"name="rx2">
                                         <label for="r2-x2" class="mb-0">x2</label>
                                     </div>
-                                    <select name="op-selector" class="variable">
+                                    <select name="op_selector" class="variable">
                                         <option value="less"><=</option>
                                         <option value="greater">>=</option>
                                     </select>
-                                    <input type="number" class="variable" id="r2-b2">
+                                    <input type="number" class="variable" id="r2-b" name="b">
                                 </div>
                             </div>
                             <div class="submit">
-                                <button type="submit" class="boton-calcular boton-principal">Calcular</button>
+                                <button type="button" id="calcularGrafico" class="boton-calcular boton-principal">Calcular</button>
                             </div>
                         </form>
                    </div>
@@ -91,12 +91,20 @@
 
             <!-- Grafica con los resultados del problema -->
             <div class="col">
-
+                <div class="card invisible" id="chartContainer">
+                    <div class="card-header">
+                        <h3 class="card-title">Soluci&oacute;n</h3>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
+    <script src="js/logic.js"></script>
     <!-- scripts de bootstrap -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
