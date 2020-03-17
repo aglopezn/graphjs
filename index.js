@@ -21,10 +21,10 @@ app.get("/metodo-grafico", (req, res) => {
 app.post("/calcular-grafico", (req, res) => {
     console.log(req.body)
     let restricciones = organizarRestricciones(req.body)
-    let resultados = generarPuntos(restricciones)
+    let resultados = generarObjectoCharts(restricciones)
     resultados.puntoSolucion = gauss(restricciones)
     console.log(restricciones)
-    console.log(resultados)
+    console.log(resultados.restriccion1.data)
     console.log(resultados.puntoSolucion)
     res.json(resultados)
 })
@@ -43,24 +43,43 @@ function organizarRestricciones(restriccionesJSON){
     return restricciones
 }
 
-function generarPuntos(restricciones){
+function generarObjectoCharts(restricciones){
     let cantidadRestricciones = restricciones.length
     let object = {}
     for (let i=0; i<cantidadRestricciones; i++){
-        object[`restriccion${i+1}`] = new Array()
-        let x = 1
-        for (let j=0; j<restricciones[i].length-1; j++){
-            aux_variable = restricciones[i][2] / restricciones[i][j]
-            if (x===1){
-                aux_objeto = {x: aux_variable, y: 0}
-                x = 0;
-            }else{
-                aux_objeto = {x: 0, y: aux_variable}
-            }
-            object[`restriccion${i+1}`].push(aux_objeto)
+        let cantidadVariables = restricciones[i].length - 1 
+        object[`restriccion${i+1}`] = {
+            label: `Restriccion${i+1}`,
+            showLine: true,
+            data: []
         }
+        if (i%2 == 0){
+            object[`restriccion${i+1}`].backgroundColor = 'rgba(67, 176, 114, 0.5)'
+            object[`restriccion${i+1}`].bordercolor = 'rgba(67, 176, 114, 1)'
+        }else{
+            object[`restriccion${i+1}`].backgroundColor = 'rgba(176, 149, 102, 0.5)'
+            object[`restriccion${i+1}`].bordercolor = 'rgba(176, 149, 102, 1)'
+        }
+        object[`restriccion${i+1}`].data = generarPuntos(cantidadVariables, restricciones[i])
     }
     return object
 }
+
+function generarPuntos(cantidadVariables, restriccion){
+    let x = true
+    let puntos = new Array()
+    for (let i=0; i<cantidadVariables; i++){
+        let aux_variable = restriccion[cantidadVariables] / restriccion[i]
+        if (x){
+            aux_objeto = {x: aux_variable, y: 0}
+            x = false;
+        }else{
+            aux_objeto = {x: 0, y: aux_variable}
+        }
+        puntos.push(aux_objeto)
+    }
+    return puntos
+}
+
 //--------------------------------------------------------------------------------
 app.listen(PORT, () => (console.log("running server on port", PORT)))

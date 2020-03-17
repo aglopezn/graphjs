@@ -44,36 +44,14 @@ function mostrarGrafica() {
 function crearGrafica (resultado) {
     var chart = document.getElementById("chart")
     var ctx = chart.getContext('2d')
+    let datasets = new Array()
+    Object.keys(resultado).forEach( key => {datasets.push(resultado[key])})
+    datasets.pop()
+    console.log(datasets)
     var lineChart = new Chart(ctx, {
         type: 'scatter',
         data: {
-            datasets: [{
-                label: 'Restricción 1',
-                backgroundColor: 'rgba(67, 176, 114, 0.5)',
-                bordercolor: 'rgba(67, 176, 114, 1)',
-                showLine: true,
-                data: [{
-                    x:resultado.restriccion1[0].x,
-                    y:resultado.restriccion1[0].y
-                },{
-                    x:resultado.restriccion1[1].x, 
-                    y:resultado.restriccion1[1].y
-                }]
-
-            }, {
-                label: 'Restricción 2',
-                backgroundColor: 'rgba(176, 149, 102, 0.5)',
-                bordercolor: 'rgba(176, 149, 102, 1)',
-                showLine: true,
-                data: [{
-                    x:resultado.restriccion2[0].x,
-                    y:resultado.restriccion2[0].y
-                },{
-                    x:resultado.restriccion2[1].x, 
-                    y:resultado.restriccion2[1].y
-                }]
-            }],
+            datasets
         }
     })
-    debugger
 }
