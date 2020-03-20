@@ -23,7 +23,8 @@
   },
   "homepage": "https://github.com/aglopezn/graphjs#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "gaussian-elimination": "^1.0.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
