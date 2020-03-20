@@ -70,14 +70,15 @@ nav {
     justify-content: center;
 }
 
+/* ---------- media queries ---------- */
 @media (max-width: 1000px){
     .equation {
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
     }
-
-    .row {
-        flex-direction: column;
+    
+    .col {
+        margin-bottom: 16px;
     }
 }
