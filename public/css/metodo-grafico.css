@@ -77,8 +77,8 @@ nav {
         justify-content: center;
         align-items: flex-start;
     }
-    
-    .col {
+
+    .col-lg-6 {
         margin-bottom: 16px;
     }
 }
