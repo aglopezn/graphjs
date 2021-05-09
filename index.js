@@ -6,7 +6,7 @@
 //--------------------------------------------------------------------------------
 const express = require("express")
 const app = express()
-const PORT = process.env.PORT || 80
+const PORT = process.env.PORT || 8080
 const clientPath = __dirname + "/public/"
 //--------------------------------------------------------------------------------
 const gauss = require("gaussian-elimination")
